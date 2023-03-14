@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+<!-- to specify the default fragment   -->
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.newsapp.ui.aljeera.HomeFragment"
+        android:label="Al Jazeera"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.newsapp.ui.bbc.GalleryFragment"
+        android:label="BBC"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.newsapp.ui.cnn.SlideshowFragment"
+        android:label="CNN"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/foxnews"
+        android:name="com.example.newsapp.fragment.FoxNewsFragment"
+        android:label="Fox News"
+        tools:layout="@layout/fragment_fox_news" >
+        <action
+            android:id="@+id/action_foxnews_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/indiaTodayFragment"
+        android:name="com.example.newsapp.fragment.IndiaTodayFragment"
+        android:label="India Today"
+        tools:layout="@layout/fragment_india_today" />
+</navigation>
